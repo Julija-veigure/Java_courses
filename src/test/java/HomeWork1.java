@@ -33,8 +33,9 @@ public class HomeWork1 {
         System.out.println("\nHOMEWORK Nr. 2, version nr.1/1" +
                 "\n12/11/2020");
 
+
          /* За основу взяла предыдущий метод на подсчет букв
-        - погуглила про Иф и дописала на остальное. */
+        - погуглила про Иф и дописала на остальное, чисто для себя :). */
 
         String str = "Tekstā - 6 vārdi, 42 burti, 7 cipari, 11 atstarpes, 6 pieturzīmes.";
         int count = 0;
