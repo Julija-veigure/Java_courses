@@ -61,7 +61,7 @@ public class HomeWork1 {
 
         System.out.println("\nHOMEWORK Nr. 2, * - Count words in String");
         {
-            String str = "Cik tekstā vādu?";
+            String str = "Cik tekstā vārdu?";
             String[] words = str.split("\\s");
 
             int wordCount = 0;
