@@ -10,7 +10,6 @@ public class HomeWork1 {
 
         System.out.println("\nHOMEWORK Nr. 1" +
                 "\n12/11/2020");
-
         //Kredīta summa 39000,00, procenti 8%, Kopā jāatgriež 421202,00)//
 
         System.out.println("Kopēja mājas cena 39000.00 eur");
@@ -79,7 +78,7 @@ public class HomeWork1 {
             // Mājas = x1, y1;
             // Skola = x2, y2;
             double result = attalums(0.9919, 0.4275, 0.9919, 0.4280);
-            System.out.println("Att'alums no m'ajas l'idz ielas galam " + result + " km.");
+            System.out.println("Attālums no mājām līdz ielas galam " + result + " km.");
         }
     }
         private double attalums(double x1, double x2, double y1, double y2) {
