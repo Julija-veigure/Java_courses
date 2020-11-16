@@ -3,9 +3,7 @@ import org.junit.jupiter.api.Test;
 import static java.lang.Math.sqrt;
 
 public class HomeWork1 {
-
     @Test
-
     public void homeWorks() {
 
         System.out.println("\nHOMEWORK Nr. 1" +
@@ -16,7 +14,6 @@ public class HomeWork1 {
         System.out.println("Procenta summa 8%");
         double q = 39000.00 * 1.08;
         System.out.println("Atmaksa kopā ar procentiem " + q + " eur");
-
 
         System.out.println("\nHOMEWORK Nr. 2, version nr.1"); {
             // Этот метод Copy -> Paste с нета :)//
@@ -71,7 +68,6 @@ public class HomeWork1 {
 
             System.out.println("Cik tekstā vādu? \nTekstā " + wordCount + " vārdi.");
         }
-
 
         System.out.println("\nHOMEWORK Nr. 3, *** - Distance");
         {
