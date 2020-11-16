@@ -3,7 +3,9 @@ import org.junit.jupiter.api.Test;
 import static java.lang.Math.sqrt;
 
 public class HomeWork1 {
+
     @Test
+
     public void homeWorks() {
 
         System.out.println("\nHOMEWORK Nr. 1" +
