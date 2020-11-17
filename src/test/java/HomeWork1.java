@@ -18,15 +18,12 @@ public class HomeWork1 {
 
         System.out.println("Kopēja mājas cena 39000.00 eur");
         System.out.println("Procenta summa 8%");
-        double res = payOut(39000, 1.08);
-        System.out.println("Atmaksa kopā ar procentiem " + res + " eur." );
-
+        double res = payOut(39000.00000, 1.08);
         BigDecimal twoDec = new BigDecimal(res).setScale(2, RoundingMode.HALF_UP);
-        double resFormat = twoDec.doubleValue();
-        System.out.println("Atmaksa kopā ar procentiem " + resFormat + " eur." );
-
+        System.out.println("Atmaksa kopā ar procentiem " + twoDec + " eur." );
+        System.out.println("Atmaksa kopā ar procentiem " + res + " eur." );
         System.out.println("Atmaksa kopā ar procentiem " );
-        System.out.printf("%.2f", resFormat);
+        System.out.printf("%.2f", res);
         System.out.println(" eur.");
 
         System.out.println("\nHOMEWORK Nr. 2, version nr.1"); {
@@ -89,8 +86,7 @@ public class HomeWork1 {
             // Skola = x2, y2;
             double result = dist (0.9919, 0.4275, 0.9919, 0.4280);
             BigDecimal threeDecimal = new BigDecimal(result).setScale(3, RoundingMode.HALF_UP);
-            double threeNumbers = threeDecimal.doubleValue();
-            System.out.println("Attālums no mājām līdz ielas galam " + threeNumbers + " km.");
+            System.out.println("Attālums no mājām līdz ielas galam " + threeDecimal + " km.");
             String resultFormat = new DecimalFormat("##.###").format(result);
             System.out.println("Attālums no mājām līdz ielas galam " + resultFormat + " km.");
             System.out.println("Attālums no mājām līdz ielas galam: ");
