@@ -15,20 +15,16 @@ public class HomeWork1 {
         System.out.println("\nHOMEWORK Nr. 1" +
                 "\n12/11/2020");
         //Kredīta summa 39000,00, procenti 8%, Kopā jāatgriež 421202,00)//
-
         System.out.println("Kopēja mājas cena 39000.00 eur");
         System.out.println("Procenta summa 8%");
         double res = payOut(39000.00000, 1.08);
         BigDecimal twoDec = new BigDecimal(res).setScale(2, RoundingMode.HALF_UP);
         System.out.println("Atmaksa kopā ar procentiem " + twoDec + " eur." );
-        System.out.println("Atmaksa kopā ar procentiem " + res + " eur." );
         System.out.println("Atmaksa kopā ar procentiem " );
         System.out.printf("%.2f", res);
         System.out.println(" eur.");
-
         System.out.println("\nHOMEWORK Nr. 2, version nr.1"); {
             // Этот метод Copy -> Paste с нета :)//
-
             String str = "Text";
             int count = 0;
             System.out.println("String: " + str);
@@ -41,14 +37,12 @@ public class HomeWork1 {
         System.out.println("\nHOMEWORK Nr. 2, version nr.2");
         {
          /* За основу взяла предыдущий метод на подсчет букв
-        - погуглила про Иф и дописала на остальное, чисто для себя :). */
-
+        - погуглила про Иф и дописала на остальное, чисто для себя. */
             String str = "Tekstā - 6 vārdi, 42 burti, 7 cipari, 11 atstarpes, 6 pieturzīmes.";
             int count = 0;
             int digit = 0;
             int space = 0;
             int other = 0;
-
             System.out.println("String: " + str);
             for (int i = 0; i < str.length(); i++) {
                 if (Character.isLetter(str.charAt(i))) {
@@ -70,16 +64,13 @@ public class HomeWork1 {
         {
             String str = "Cik tekstā vārdu?";
             String[] words = str.split("\\s");
-
             int wordCount = 0;
             int i, wordsSize = words.length, strSize = str.length();
             for (i = 0; i < wordsSize; ++i)
                 if (words[i] != null && !"".equals(words[i]))
                     ++wordCount;
-
             System.out.println("Cik tekstā vādu? \nTekstā " + wordCount + " vārdi.");
         }
-
         System.out.println("\nHOMEWORK Nr. 3, *** - Distance");
         {
             // Mājas = x1, y1;
@@ -92,7 +83,6 @@ public class HomeWork1 {
             System.out.println("Attālums no mājām līdz ielas galam: ");
             System.out.printf("%.3f",result);
             System.out.println(" km.");
-
         }
     }
         private double dist (double x1, double x2, double y1, double y2) {
