@@ -3,11 +3,14 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 
 public class HomeWorkSelenium   {
     private final By ACCEPT_COOKIE_BTN = By.xpath(".//button[@class = 'notification__button']");
     private final By NEWS = By.xpath(".//span[@itemprop = 'headline name']");
     private final By COMMENTS_NEWS = By.xpath(".//a[contains(@class,'-share__item article-share__item--comments')]");
+    //private final By NEWS_FROM_LIST = By.linkText(List);
     // .//span[@class = 'article-share__item--count']
     // .//a[contains(@class, 'article-share__item article-share__item--comments']
       private final By ALL_NEWS = By.cssSelector(".list-article__headline");
@@ -31,6 +34,7 @@ public class HomeWorkSelenium   {
 
         WebElement openNews = driver.findElement(NEWS);
         openNews.click();
+
 
         String titleNews = driver.getTitle();
         String titleText = driver.findElement(NEWS).getText();
