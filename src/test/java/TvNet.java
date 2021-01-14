@@ -12,7 +12,7 @@ public class TvNet {
     private final By NEWS = By.xpath(".//span[@itemprop = 'headline name']");
     private final By COMMENTS_NEWS = By.xpath(".//a[contains(@class,'-share__item article-share__item--comments')]");
     private final By ALL_NEWS = By.cssSelector(".//list-article__headline");
-    private final String TITLE = "ASV plāno slēgt pēdējos konsulātus Krievijā";
+    private final String TITLE = "Tā Jauno gadu sagaidīja sabiedrībā pazīstami ļaudis ";
 
 
     @Test
@@ -28,6 +28,7 @@ public class TvNet {
         acceptBtn.click();
 
         List<WebElement> articles = driver.findElements(NEWS);
+
 
 
             //      ja vēlos konkrētu skaitu ar virsrakstiem, piemēram 6, tad:
