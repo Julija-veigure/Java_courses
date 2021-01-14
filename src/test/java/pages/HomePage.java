@@ -17,5 +17,6 @@ public class HomePage {
     public void openArticleById(int id) {
        WebElement articleToClick = baseFunc.findElements(TITLE).get(id);
        baseFunc.click(articleToClick);
+
     }
 }

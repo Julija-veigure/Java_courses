@@ -45,5 +45,6 @@ public class BaseFunс {
     public List<WebElement> findElements(By locator) {
         LOGGER.info("getting all elements by " + locator);
         return  driver.findElements(locator);
+
     }
 }
