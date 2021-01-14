@@ -34,5 +34,6 @@ public class Course {
 
     public void addStudent(Student student) {
         students.add(student);
+
     }
 }
