@@ -7,7 +7,7 @@ import java.util.List;
 
 public class JavaObjectWorkshop {
     @Test
-    public void workWithObjects()   {
+    public void workWithObjects() {
         Student lena = new Student();
 
         lena.setFirstName("Jeļena");
@@ -34,5 +34,6 @@ public class JavaObjectWorkshop {
         Course qa2 = new Course("QA2 - Automation", 3, students);
         qa2.addStudent(new Student("Jūlija", "Veigure", 34, "julija@gmail.com"));
         qa2.printInfo();
+
     }
 }
