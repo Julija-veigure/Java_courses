@@ -78,21 +78,6 @@ public class HomeWork2 {
 
         driver.quit();
 
-        //1 _________________________If comments are not empty - delete comments count____________________________________
-//        if (!currentArticle.findElements(COMMENTS).isEmpty()) {
-//            currentArticle.findElement(TITLE).click();
-//            titleToCheck = titleToCheck.substring(0, titleToCheck.lastIndexOf(" ("));
-//            String titleFromOpenPage = driver.findElement(TITLE_PAGE).getText();
-//            Assertions.assertEquals(titleToCheck, titleFromOpenPage, "Incorrect Title!");
-//        }
-
-//2 _________________________If comments are not empty - replace comments count____________________________________
-//        if (!currentArticle.findElements(COMMENTS).isEmpty()) {
-//        currentArticle.findElement(TITLE).click();
-//        String delComCount = (" (" + commentsToParse + ")");
-//        titleToCheck = titleToCheck.replace(delComCount, "" );
-//        Assertions.assertEquals(titleToCheck, titleFromOpenPage, "Incorrect Title!");
-
     }
 }
 
