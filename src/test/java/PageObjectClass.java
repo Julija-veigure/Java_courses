@@ -11,5 +11,6 @@ public class PageObjectClass {
         HomePage homePage = new HomePage(baseFunс);
         homePage.acceptCookies();
         homePage.openArticleById(3);
+
     }
 }
