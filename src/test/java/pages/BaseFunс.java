@@ -2,6 +2,7 @@ package pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,9 @@ public class BaseFunс {
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
     private WebDriver driver;
     private WebDriverWait wait;
+    private String title;
+
+
 
     public BaseFunс() {
         LOGGER.info("Setting webdriver path");
@@ -42,9 +46,24 @@ public class BaseFunс {
         we.click();
 
     }
-    public List<WebElement> findElements(By locator) {
-        LOGGER.info("getting all elements by " + locator);
-        return  driver.findElements(locator);
 
+    public List<WebElement> findElements(By locator) {
+        LOGGER.info("Getting all elements by " + locator);
+        return driver.findElements(locator);
     }
+
+    public String getText(By locator) {
+        title = driver.findElement(locator).getText();
+        LOGGER.info(title);
+        return title;
+    }
+
+
+//    int commentCount = 0;
+//
+//        if (!currentArticle.findElements(COMMENTS_COUNT).isEmpty()) {
+//                String commentsToParse = currentArticle.findElement(COMMENTS_COUNT).getText();    //Title text (36)
+//                commentsToParse = commentsToParse.substring(1, commentsToParse.length() - 1); //(36) -> 36
+//                commentCount = Integer.parseInt(commentsToParse);
+//                }
 }
