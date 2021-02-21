@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.sound.midi.Soundbank;
 import java.util.List;
 
 
@@ -91,6 +92,7 @@ public class FullTest {
 
         LOGGER.info("Compare comments count : " + "\n" + commentCount + "\n" + comments.size());
         Assertions.assertEquals(commentCount, comments.size());
+
 
         driver.quit();
 
