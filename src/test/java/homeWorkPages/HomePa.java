@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class HomePa {
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
 
-    private final By ACCEPT_COOKIE_BTN = By.xpath(".//div[@class = 'button cookie-notif__content--button']");
+    private final By ACCEPT_COOKIE_BTN = By.xpath(".//button[@mode = 'primary']");
     private final By ARTICLE = By.tagName("article");
     private final By TITLE = By.xpath(".//span[@itemprop = 'headline name']");
     private final By COMMENTS_COUNT = By.xpath(".//span[contains(@class, 'list-article__comment')]");
