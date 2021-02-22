@@ -1,4 +1,4 @@
-package homeWorkPages;
+package pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,10 +48,15 @@ public class BaFu {
         return driver.findElements(locator);
     }
 
-    public String getTitle(By locator) {
-        title = driver.findElement(locator).getText();
-        return title;
+    public String getText(By locator) {
+        return driver.findElement(locator).getText();
     }
-//    public void compare(String titleHoPa,String titleOpPa) {
-//    }
+
+
+    public void closeWindow() {
+        LOGGER.info("Test done!");
+        driver.quit();
+    }
+
 }
+//

@@ -1,4 +1,4 @@
-package homeWorkPages;
+package pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,15 +16,14 @@ public class CommentsPa {
         this.baFu = baFu;
     }
 
-    public void getTitle() {
-
-        String title = baFu.getTitle(TITLE_COM_PAGE);
-        LOGGER.info("Title from comments page: " + title);
+    public String getText() {
+        LOGGER.info("Title from comments page: " + baFu.getText(TITLE_COM_PAGE));
+        return baFu.getText(TITLE_COM_PAGE);
     }
 
     public int countComments() {
-        int com = baFu.findElements(COMMENTS_LIST).size();
-        LOGGER.info("Comments count from list: " + com);
-        return com;
+        LOGGER.info("Comments count from list: " + baFu.findElements(COMMENTS_LIST).size());
+        return baFu.findElements(COMMENTS_LIST).size();
+
     }
 }

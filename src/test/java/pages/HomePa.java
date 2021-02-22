@@ -1,5 +1,6 @@
-package homeWorkPages;
+package pages;
 
+import com.fasterxml.jackson.databind.ser.std.ObjectArraySerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -13,8 +14,8 @@ public class HomePa {
     private final By TITLE = By.xpath(".//span[@itemprop = 'headline name']");
     private final By COMMENTS_COUNT = By.xpath(".//span[contains(@class, 'list-article__comment')]");
 
-    private WebElement articleToClick;
     private BaFu baFu;
+    private WebElement articleToClick;
 
     public HomePa(BaFu baFu) {
         this.baFu = baFu;
@@ -24,16 +25,13 @@ public class HomePa {
         baFu.click(ACCEPT_COOKIE_BTN);
     }
 
-    public void findArticleById(int id) {
+    public String getArticleTextById(int id) {
         articleToClick = baFu.findElements(ARTICLE).get(id);
+        LOGGER.info("Title from home page: " + articleToClick.findElement(TITLE).getText());
+        return articleToClick.findElement(TITLE).getText();
     }
 
-    public void getTitle() {
-        String titleToCheck = articleToClick.findElement(TITLE).getText();
-        LOGGER.info("Title from home: " + titleToCheck);
-    }
-
-    public void getCommCount() {
+    public int getCommCount() {
         int commentCount = 0;
 
         if (!articleToClick.findElements(COMMENTS_COUNT).isEmpty()) {
@@ -42,9 +40,12 @@ public class HomePa {
             commentCount = Integer.parseInt(commentsToParse);
             LOGGER.info("Comments count: " + commentCount);
         }
+        return commentCount;
     }
 
-    public void openArticle() {
+    public ArticlePa openArticle() {
+        LOGGER.info("Opens new page");
         baFu.click(articleToClick);
+        return new ArticlePa(baFu);
     }
 }
