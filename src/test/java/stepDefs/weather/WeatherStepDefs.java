@@ -1,4 +1,4 @@
-package stepDefs;
+package stepDefs.weather;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;

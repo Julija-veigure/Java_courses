@@ -1,12 +1,13 @@
-package pages;
+package pages.tvnet;
 
-import com.fasterxml.jackson.databind.ser.std.ObjectArraySerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.tvnet.BaseFunctions;
+import pages.tvnet.TvNetArticlePage;
 
-public class HomePa {
+public class TvNetHomePage {
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
 
     private final By ACCEPT_COOKIE_BTN = By.xpath(".//button[@mode = 'primary']");
@@ -14,19 +15,19 @@ public class HomePa {
     private final By TITLE = By.xpath(".//span[@itemprop = 'headline name']");
     private final By COMMENTS_COUNT = By.xpath(".//span[contains(@class, 'list-article__comment')]");
 
-    private BaFu baFu;
+    private BaseFunctions baseFunctions;
     private WebElement articleToClick;
 
-    public HomePa(BaFu baFu) {
-        this.baFu = baFu;
+    public TvNetHomePage(BaseFunctions baseFunctions) {
+        this.baseFunctions = baseFunctions;
     }
 
     public void acceptCookies() {
-        baFu.click(ACCEPT_COOKIE_BTN);
+        baseFunctions.click(ACCEPT_COOKIE_BTN);
     }
 
     public String getArticleTextById(int id) {
-        articleToClick = baFu.findElements(ARTICLE).get(id);
+        articleToClick = baseFunctions.findElements(ARTICLE).get(id);
         LOGGER.info("Title from home page: " + articleToClick.findElement(TITLE).getText());
         return articleToClick.findElement(TITLE).getText();
     }
@@ -43,9 +44,9 @@ public class HomePa {
         return commentCount;
     }
 
-    public ArticlePa openArticle() {
+    public TvNetArticlePage openArticle() {
         LOGGER.info("Opens new page");
-        baFu.click(articleToClick);
-        return new ArticlePa(baFu);
+        baseFunctions.click(articleToClick);
+        return new TvNetArticlePage(baseFunctions);
     }
 }
