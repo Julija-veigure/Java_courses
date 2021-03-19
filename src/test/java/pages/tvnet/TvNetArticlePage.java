@@ -3,6 +3,7 @@ package pages.tvnet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import pages.BaseFunctions;
 
 public class TvNetArticlePage {
     private final Logger LOGGER = LogManager.getLogger(this.getClass());

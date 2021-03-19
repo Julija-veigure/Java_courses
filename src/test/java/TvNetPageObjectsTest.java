@@ -1,6 +1,6 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import pages.tvnet.BaseFunctions;
+import pages.BaseFunctions;
 import pages.tvnet.TvNetCommentsPage;
 import pages.tvnet.TvNetHomePage;
 import pages.tvnet.TvNetArticlePage;
@@ -29,11 +29,10 @@ public class TvNetPageObjectsTest {
         Assertions.assertEquals(commentsHomePage, commentsArticlePage, "Different comments count in article page");
 
         TvNetCommentsPage commentsPa = tvNetArticlePage.openComments();
-        String commentsPageTitle =  commentsPa.getText();
+        String commentsPageTitle = commentsPa.getText();
         Assertions.assertEquals(articlePageTitle, commentsPageTitle, "Error in comments page");
         int commentsCount = commentsPa.countComments();
         Assertions.assertEquals(commentsHomePage, commentsCount, "Different comments count");
 
-        baseFunctions.closeWindow();
     }
 }

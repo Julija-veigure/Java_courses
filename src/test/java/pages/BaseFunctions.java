@@ -1,4 +1,4 @@
-package pages.tvnet;
+package pages;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -37,7 +37,7 @@ public class BaseFunctions {
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
             url = "http://" + url;
         }
-                driver.get(url);
+        driver.get(url);
 
 //        if (url.startsWith("http://") || url.startsWith("https://")) {
 //
@@ -61,8 +61,9 @@ public class BaseFunctions {
         LOGGER.info("Getting all elements by " + locator);
         return driver.findElements(locator);
     }
+
     public WebElement findElement(By locator) {
-    LOGGER.info("Getting all elements by " + locator);
+        LOGGER.info("Getting all elements by " + locator);
         return driver.findElement(locator);
     }
 
@@ -70,7 +71,7 @@ public class BaseFunctions {
         return driver.findElement(locator).getText();
     }
 
-    public void type (By locator, String text) {
+    public void type(By locator, String text) {
         WebElement inputField = driver.findElement(locator);
         inputField.clear();
         inputField.sendKeys(text);
@@ -82,10 +83,9 @@ public class BaseFunctions {
     }
 
 
-    public void closeWindow() {
+    public void closeBrowser() {
         LOGGER.info("Test done!");
         driver.quit();
     }
-
 }
-//
+
